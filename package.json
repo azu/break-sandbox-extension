@@ -27,5 +27,8 @@
     "*.{js,jsx,ts,tsx,css}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "webextension-polyfill-ts": "^0.25.0"
   }
 }

@@ -2,6 +2,12 @@
 
 iframe sandbox testings.
 
+- Run web extension in frame
+- Fake UA in iframe
+- Content Script to Content Script
+
+![img.png](img.png)
+
 ## Install
 
 	$ npm install

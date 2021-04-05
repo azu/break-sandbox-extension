@@ -9,6 +9,13 @@
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
   },
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking"
+  ],
   "background": {
     "scripts": [
       "scripts/background.js"
@@ -26,12 +33,12 @@
       "all_frames": true
     }
   ],
-  "page_action": {
+  "browser_action": {
+    "default_area": "tabstrip",
     "default_icon": {
       "19": "images/icon-19.png",
       "38": "images/icon-38.png"
     },
-    "default_title": "__MSG_browserActionTitle__",
-    "default_popup": "pages/popup.html"
+    "default_title": "Close current tab"
   }
 }
