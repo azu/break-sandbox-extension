@@ -44,6 +44,7 @@ const parentTargetPage = "http://localhost:5000";
 const fakeUATargetPage = "https://httpbin.org/get";
 
 function rewriteUserAgentHeader(details: OnBeforeSendHeadersDetailsType) {
+    console.log(details);
     const isIFrame = details.type === "sub_frame" && details.initiator === parentTargetPage;
     if (!isIFrame) {
         return details;
@@ -61,12 +62,14 @@ function rewriteUserAgentHeader(details: OnBeforeSendHeadersDetailsType) {
             header.value = FAKE_UA;
         }
     });
+    details?.requestHeaders?.push({ name: "Cookie", value: "test=1" });
     return { requestHeaders: details.requestHeaders };
 }
 
 browser.webRequest.onBeforeSendHeaders.addListener(rewriteUserAgentHeader, { urls: [fakeUATargetPage] }, [
     "blocking",
-    "requestHeaders"
+    "requestHeaders",
+    "extraHeaders"
 ]);
 // content <- background -> content
 const portMap = new Map<string, Port>();

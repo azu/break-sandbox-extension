@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   "scripts": {
+    "serve": "http-server server --port 5000",
     "dev": "webextension-toolbox dev",
     "build": "webextension-toolbox build",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
@@ -10,6 +11,7 @@
   },
   "devDependencies": {
     "copy-webpack-plugin": "^8.1.0",
+    "http-server": "^0.12.3",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "ts-loader": "^8.1.0",
