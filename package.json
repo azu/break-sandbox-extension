@@ -7,7 +7,7 @@
     "dev": "webextension-toolbox dev",
     "build": "webextension-toolbox build",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
-    "prepare": "git config --local core.hooksPath .githook"
+    "prepare": "git config --local core.hooksPath .githooks"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^8.1.0",
